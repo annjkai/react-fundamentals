@@ -8,14 +8,13 @@
 <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
 
 <script type="module">
-    const container = document.getElementById('root');
-    const root = ReactDOM.createRoot(container);
+    const root = document.getElementById('root');
 
-    const firstSpan = React.createElement('span', {'className': 'first'}, 'Hello');
-    const secondSpan = React.createElement('span', {'className': 'second'}, 'World');
+    const firstSpan = React.createElement('span', {'className': 'first', 'key': 'first'}, 'Hello');
+    const secondSpan = React.createElement('span', {'className': 'second', 'key': 'second'}, 'World');
 
     const element = React.createElement('div', {'className': 'container'}, [firstSpan, ' ', secondSpan]);
 
-    root.render(element);
+    ReactDOM.createRoot(root).render(element);
 </script>
 </body>
